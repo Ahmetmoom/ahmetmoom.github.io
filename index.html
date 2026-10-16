@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZAKKIRNI — ذكّرني</title>
+<meta name="description" content="ZAKKIRNI: adhkar, Quran wird, prayer times, adhan alerts, hadith and a friendly contest — Arabic, Turkish, English.">
+<meta name="theme-color" content="#0b3d2e">
+<style>
+:root{
+  --bg1:#0b3d2e; --bg2:#0f5a45; --ink:#f4fbf7; --muted:#b9d8cb;
+  --gold:#fbbf24; --mint:#34d399; --card:rgba(255,255,255,.07); --line:rgba(255,255,255,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;
+  color:var(--ink); line-height:1.7;
+  background:linear-gradient(160deg,var(--bg1) 0%,var(--bg2) 55%,#1e3a8a 130%);
+  background-color:var(--bg1);
+  min-height:100vh;
+}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+header.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:.5px;text-decoration:none}
+.brand svg{width:34px;height:34px}
+.langs{display:flex;gap:6px}
+.langs button{
+  background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;
+  padding:6px 14px;font:inherit;font-size:14px;cursor:pointer;
+}
+.langs button[aria-pressed="true"]{background:var(--gold);color:#3b2a00;border-color:var(--gold);font-weight:700}
+.hero{text-align:center;padding:48px 0 36px}
+.hero .logo{width:112px;height:112px;margin:0 auto 18px;display:block;filter:drop-shadow(0 8px 24px rgba(0,0,0,.35))}
+.hero h1{font-size:clamp(34px,7vw,56px);letter-spacing:1px;line-height:1.15}
+.hero p.tag{font-size:clamp(17px,3.4vw,22px);color:var(--muted);margin:14px auto 0;max-width:640px}
+.cta{display:inline-block;margin-top:28px;background:var(--gold);color:#3b2a00;font-weight:800;
+  text-decoration:none;padding:14px 28px;border-radius:14px;font-size:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+.sub{margin-top:12px;font-size:14px;color:var(--muted)}
+h2.sec{font-size:24px;text-align:center;margin:44px 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card h3{font-size:18px;margin-bottom:6px;color:var(--gold)}
+.card p{font-size:15px;color:#e3f3ec}
+.band{margin:40px 0 8px;background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:18px;padding:22px;text-align:center}
+.band p{color:var(--muted);font-size:15px}
+footer{margin:36px 0 26px;text-align:center;color:var(--muted);font-size:14px}
+footer a{color:var(--ink);margin:0 8px}
+@media (max-width:480px){ .hero{padding-top:30px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top" id="top">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M62 10a40 40 0 1 0 0 80 32 32 0 1 1 0-80z" fill="#fbbf24"/><path d="M66 36c14-2 22 6 22 14 0 12-12 20-24 16-8-3-12-12-10-20 1-6 6-9 12-10z" fill="#34d399"/><path d="M84 38 62 66" stroke="#0b3d2e" stroke-width="3" stroke-linecap="round"/></svg>
+      <span>ZAKKIRNI</span>
+    </a>
+    <div class="langs" role="group" aria-label="Language">
+      <button data-l="ar">العربية</button>
+      <button data-l="tr">Türkçe</button>
+      <button data-l="en">English</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="rgba(255,255,255,.1)"/><path d="M58 18a33 33 0 1 0 0 64 26 26 0 1 1 0-64z" fill="#fbbf24"/><path d="M62 38c12-2 19 5 19 12 0 10-10 17-20 14-7-2-10-10-8-17 1-5 5-8 9-9z" fill="#34d399"/><path d="M78 40 60 62" stroke="#0b3d2e" stroke-width="2.6" stroke-linecap="round"/></svg>
+    <h1 data-i="name">ذكّرني</h1>
+    <p class="tag" data-i="tag"></p>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.izzettin.zikir" data-i="cta"></a>
+    <p class="sub" data-i="sub"></p>
+  </section>
+
+  <h2 class="sec" data-i="featTitle"></h2>
+  <section class="grid">
+    <div class="card"><h3 data-i="f1t"></h3><p data-i="f1d"></p></div>
+    <div class="card"><h3 data-i="f2t"></h3><p data-i="f2d"></p></div>
+    <div class="card"><h3 data-i="f3t"></h3><p data-i="f3d"></p></div>
+    <div class="card"><h3 data-i="f4t"></h3><p data-i="f4d"></p></div>
+    <div class="card"><h3 data-i="f5t"></h3><p data-i="f5d"></p></div>
+    <div class="card"><h3 data-i="f6t"></h3><p data-i="f6d"></p></div>
+  </section>
+
+  <div class="band"><p data-i="band"></p></div>
+
+  <footer>
+    <a href="privacy.html" data-i="privacy"></a> ·
+    <a href="mailto:ahmetgenco2002@gmail.com" data-i="contact"></a>
+    <p style="margin-top:10px">© 2026 ZAKKIRNI — Ahmet Genco</p>
+  </footer>
+</div>
+
+<script>
+var T = {
+ ar:{name:"ذكّرني",
+  tag:"أذكار وورد قرآني ومواقيت الصلاة وتنبيهات الأذان في تطبيق واحد بسيط.",
+  cta:"حمّله من Google Play", sub:"بالعربية والتركية والإنجليزية",
+  featTitle:"ماذا في التطبيق؟",
+  f1t:"الأذكار والأدعية", f1d:"أذكار الصباح والمساء وبعد الصلاة بعدّاد باللمس، مع فضل كل ذكر وحصن المسلم.",
+  f2t:"الورد القرآني", f2d:"المصحف مع ورد يومي وتتبّع للختمة وتذكير حتى لا يفوتك وردك.",
+  f3t:"المواقيت والأذان", f3d:"مواقيت دقيقة لموقعك وتنبيه أذان لكل صلاة وعدّ تنازلي وبوصلة قبلة.",
+  f4t:"المسابقة والغرف", f4d:"أسئلة دينية ومعلومات عامة وترتيب أسبوعي، وغرف خاصة تتنافس فيها مع أصدقائك.",
+  f5t:"رياض الصالحين", f5d:"أكثر من ألف وثمانمئة حديث مرتبة بالكتب والأبواب مع بحث سريع.",
+  f6t:"نقاط وأوسمة", f6d:"نقاط وسلاسل أيام متتالية وأوسمة ودوريات أسبوعية تحفّزك على المداومة.",
+  band:"يمكنك إخفاء اسمك من ترتيب العبادات، وتختار ما يظهر للآخرين.",
+  privacy:"سياسة الخصوصية", contact:"تواصل معنا"},
+ tr:{name:"ZAKKIRNI",
+  tag:"Zikirler, Kur'an hizmi, namaz vakitleri ve ezan bildirimleri tek bir sade uygulamada.",
+  cta:"Google Play'den indir", sub:"Arapça, Türkçe ve İngilizce",
+  featTitle:"Uygulamada neler var?",
+  f1t:"Zikirler ve dualar", f1d:"Sabah, akşam ve namaz sonrası zikirler dokunmatik sayaçla; her zikrin fazileti ve Hısnü'l-Müslim.",
+  f2t:"Kur'an hizmi", f2d:"Günlük hizim, hatim takibi ve hatırlatmalarla Mushaf.",
+  f3t:"Vakitler ve ezan", f3d:"Konumuna göre doğru vakitler, her namaz için ezan bildirimi, geri sayım ve kıble pusulası.",
+  f4t:"Yarışma ve odalar", f4d:"Dinî sorular, genel kültür, haftalık sıralama ve arkadaşlarınla özel yarışma odaları.",
+  f5t:"Riyâzü's-Sâlihîn", f5d:"Kitap ve bablara göre düzenlenmiş bin sekiz yüzden fazla hadis ve hızlı arama.",
+  f6t:"Puan ve rozetler", f6d:"Puanlar, ardışık gün serileri, rozetler ve haftalık ligler seni istikrarlı tutar.",
+  band:"İsmini ibadet sıralamasından gizleyebilir, başkalarına ne görüneceğini sen seçersin.",
+  privacy:"Gizlilik politikası", contact:"İletişim"},
+ en:{name:"ZAKKIRNI",
+  tag:"Adhkar, Quran wird, prayer times and adhan alerts in one simple app.",
+  cta:"Get it on Google Play", sub:"In Arabic, Turkish and English",
+  featTitle:"What's inside",
+  f1t:"Adhkar and duas", f1d:"Morning, evening and after-prayer adhkar with a tap counter, the virtue of each dhikr, and Hisn al-Muslim.",
+  f2t:"Quran wird", f2d:"The Mushaf with a daily wird, khatmah tracking and reminders so you never miss your reading.",
+  f3t:"Prayer times and adhan", f3d:"Accurate times for your location, adhan alerts for each prayer, a live countdown and a Qibla compass.",
+  f4t:"Contest and rooms", f4d:"Religious and general-knowledge questions, a weekly ranking, and private rooms to compete with friends.",
+  f5t:"Riyad as-Salihin", f5d:"Over 1,800 hadiths organized by books and chapters, with quick search.",
+  f6t:"Points and badges", f6d:"Points, day streaks, badges and weekly leagues keep you consistent.",
+  band:"You can hide your name from the worship ranking and choose what others see.",
+  privacy:"Privacy policy", contact:"Contact"}
+};
+function setLang(l){
+  if(!T[l]) l="en";
+  document.documentElement.lang=l;
+  document.documentElement.dir = (l==="ar") ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i]").forEach(function(el){
+    var k=el.getAttribute("data-i"); if(T[l][k]!==undefined) el.textContent=T[l][k];
+  });
+  document.querySelectorAll(".langs button").forEach(function(b){
+    b.setAttribute("aria-pressed", b.getAttribute("data-l")===l ? "true":"false");
+  });
+  document.title = "ZAKKIRNI — " + (l==="ar" ? "ذكّرني" : T[l].tag.split(".")[0]);
+  try{ localStorage.setItem("zk_lang", l); }catch(e){}
+}
+document.querySelectorAll(".langs button").forEach(function(b){
+  b.addEventListener("click", function(){ setLang(b.getAttribute("data-l")); });
+});
+var start="ar";
+try{ start = localStorage.getItem("zk_lang") || ""; }catch(e){}
+if(!start){
+  var nl=(navigator.language||"ar").toLowerCase();
+  start = nl.indexOf("tr")===0 ? "tr" : nl.indexOf("ar")===0 ? "ar" : nl.indexOf("en")===0 ? "en" : "ar";
+}
+setLang(start);
+</script>
+</body>
+</html>
